@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('blog', function () {
     return view('blog');
 });
+Route::get('/home', fn () => view('home'));
+Route::get('/about', fn () => view('about'));
+Route::get('/gallery', fn () => view('gallery'));
