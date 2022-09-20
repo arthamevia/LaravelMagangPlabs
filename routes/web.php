@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,12 @@ Route::get('blog', function () {
 Route::get('/home', fn () => view('home'));
 Route::get('/about', fn () => view('about'));
 Route::get('/gallery', fn () => view('gallery'));
+Route::get('users', function () {
+    $users = [];
+    return view('users.index', [
+    'users' => $users,
+    ]);
+   });
+
+// Crud student
+Route::resource('students', StudentController::class);
