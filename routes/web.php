@@ -30,5 +30,8 @@ Route::get('users', function () {
     ]);
    });
 
+//    Route::get('/student', [StudentController::class, 'index']);
+
 // Crud student
-Route::resource('students', StudentController::class);
+// Route::resource('/student', StudentController::class);
+Route::get('/student', [StudentController::class, 'index']);
